@@ -1,18 +1,20 @@
 import React from 'react'
-import { Dropdown, Menu, Image } from 'semantic-ui-react'
+import { Dropdown, Menu,Image } from 'semantic-ui-react'
 
-export default function SignedIn() {
+export default function SignedIn({signOut}) {
     return (
         <div>
             <Menu.Item>
-                <Image avatar spaced="right" src="https://assets-global.website-files.com/6005fac27a49a9cd477afb63/6057684e5923ad2ae43c8150_bavassano_homepage_before.jpg"></Image>
-                <Dropdown pointing="top left" text="Fatih">
+                <Image avatar spaced="right" src="https://cdn.arstechnica.net/wp-content/uploads/2016/02/5718897981_10faa45ac3_b-640x624.jpg"/>
+                <Dropdown pointing="top left" text="Fatih Deniz">
                     <Dropdown.Menu>
-                        <Dropdown.Item text="Bilgilerim" icon="info" />
-                        <Dropdown.Item text="Bilgilerim" icon="SignOut" />
+                        <Dropdown.Item text="Bilgilerim" icon="info"/>
+                        <Dropdown.Item onClick={signOut} text="Çıkış Yap" icon="sign-out"/>
                     </Dropdown.Menu>
                 </Dropdown>
             </Menu.Item>
         </div>
     )
 }
+
+//22.50 Dersteyiz
